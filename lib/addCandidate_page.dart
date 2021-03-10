@@ -79,7 +79,7 @@ class AddPageState extends State<AddPage> {
             Image.asset("semecity.png", width: width / 4, height: height / 6),
             SizedBox(height: height / 30),
             Container(
-              width: width > 720 ? width / 5 : width / 3.8,
+              width: width > 720 ? width / 4.7 : width / 3.6,
               height: height / 10,
               child: TextFormField(
                 cursorColor: Colors.black,
@@ -106,14 +106,15 @@ class AddPageState extends State<AddPage> {
             ),
             SizedBox(height: height / 25),
             Container(
-              width: width > 720 ? width / 5 : width / 3.8,
-              height: height / 10,
+              width: width > 720 ? width / 4.7 : width / 3.6,
+              height: height / 5,
               child: TextFormField(
+                maxLines: 4,
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  hintText: "Description",
+                  hintText: "\n\nPrésentation",
                   prefixIcon: Icon(
                     Icons.description,
                     color: Color.fromRGBO(255, 213, 0, 1),
@@ -133,14 +134,14 @@ class AddPageState extends State<AddPage> {
             ),
             SizedBox(height: height / 25),
             Container(
-              width: width > 720 ? width / 5 : width / 3.8,
+              width: width > 720 ? width / 4.7 : width / 3.6,
               height: height / 10,
               child: TextFormField(
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.white,
-                  hintText: "Lien vers sa présentation",
+                  hintText: "Lien vers une page professionnelle(linkedin, etc.)",
                   prefixIcon: Icon(
                     Icons.link,
                     color: Color.fromRGBO(255, 213, 0, 1),
@@ -161,7 +162,7 @@ class AddPageState extends State<AddPage> {
             SizedBox(height: height / 25),
             SizedBox(height: height / 15),
             Container(
-              width: width > 700 ? width / 7 : width / 5.5,
+              width: width > 700 ? width / 6.7 : width / 5.2,
               height: height / 20,
               child: FlatButton(
                 shape: new RoundedRectangleBorder(

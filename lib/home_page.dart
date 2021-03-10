@@ -29,22 +29,24 @@ class FirstPageState extends State<FirstPage> {
                 height: height / 11,
                 alignment: Alignment.bottomLeft,
               ),
-              SizedBox(width: width / 6),
-              FlatButton(
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AddImage()));
-                },
-                child: Text(
-                  "S'inscrire",
-                  style: GoogleFonts.openSans(
-                    fontSize: height / 37,
-                    color: Color.fromRGBO(11, 35, 111, 1),
-                    fontWeight: FontWeight.w600,
+              SizedBox(width: width / 35),
+              Container(
+                width: width / 4.3,
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AddImage()));
+                  },
+                  child: Text(
+                    "S'inscrire",
+                    style: GoogleFonts.openSans(
+                      fontSize: width > 760 ? height / 46 : height / 56,
+                      color: Color.fromRGBO(11, 35, 111, 1),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
+                  textColor: Color.fromRGBO(11, 35, 111, 1),
                 ),
-                minWidth: width / 8,
-                textColor: Color.fromRGBO(11, 35, 111, 1),
               ),
               Text(
                 "|",
@@ -53,23 +55,26 @@ class FirstPageState extends State<FirstPage> {
                   color: Color.fromRGBO(11, 35, 111, 1),
                 ),
               ),
-              FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => AdminConnexionPage()));
-                },
-                child: Text(
-                  "Administrer",
-                  style: GoogleFonts.openSans(
-                    fontSize: height / 37,
-                    color: Color.fromRGBO(11, 35, 111, 1),
-                    fontWeight: FontWeight.w600,
+              Container(
+                width: width / 3.8,
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminConnexionPage()));
+                  },
+                  child: Text(
+                    "Administrer",
+                    style: GoogleFonts.openSans(
+                      fontSize: width > 760 ? height / 46 : height / 56,
+                      color: Color.fromRGBO(11, 35, 111, 1),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
+                  minWidth: width / 8,
+                  textColor: Color.fromRGBO(11, 35, 111, 1),
                 ),
-                minWidth: width / 8,
-                textColor: Color.fromRGBO(11, 35, 111, 1),
               ),
               Text(
                 "|",
@@ -78,21 +83,23 @@ class FirstPageState extends State<FirstPage> {
                   color: Color.fromRGBO(11, 35, 111, 1),
                 ),
               ),
-              FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Info()));
-                },
-                child: Text(
-                  "À propos",
-                  style: GoogleFonts.openSans(
-                    fontSize: height / 37,
-                    color: Color.fromRGBO(11, 35, 111, 1),
-                    fontWeight: FontWeight.w600,
+              Container(
+                width: width / 4.3,
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Info()));
+                  },
+                  child: Text(
+                    "À propos",
+                    style: GoogleFonts.openSans(
+                      fontSize: width > 800 ? height / 46 : height / 56,
+                      color: Color.fromRGBO(11, 35, 111, 1),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
+                  textColor: Color.fromRGBO(11, 35, 111, 1),
                 ),
-                minWidth: width / 8,
-                textColor: Color.fromRGBO(11, 35, 111, 1),
               ),
             ],
           ),
@@ -158,9 +165,9 @@ class FirstPageState extends State<FirstPage> {
                   ),
                   SizedBox(height: height / 15),
                   Container(
-                    width: width > 900
-                        ? width / 8
-                        : (width > 690 ? width / 7 : width / 4.2),
+                    width: width > 1100
+                        ? width / 6.1
+                        : (width > 690 ? width / 4.8 : width / 2.4),
                     height: height / 15,
                     child: FlatButton(
                       shape: new RoundedRectangleBorder(

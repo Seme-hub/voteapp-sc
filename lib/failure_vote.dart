@@ -27,7 +27,7 @@ class FailureVoteState extends State<FailureVote> {
                 Text(
                   "Bienvenue sur notre plateforme de vote !",
                   style: TextStyle(
-                    fontSize: height / 35,
+                    fontSize: width > 450 ? height / 35 : height / 45,
                     color: Color.fromRGBO(1, 77, 152, 1),
                   ),
                 ),
@@ -62,7 +62,7 @@ class FailureVoteState extends State<FailureVote> {
                     ),
                     width: width > 900
                         ? width / 4
-                        : (width > 700 ? width / 3 : width / 2),
+                        : (width > 780 ? width / 3 : width / 1.5),
                     height: height / 3,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +84,9 @@ class FailureVoteState extends State<FailureVote> {
                         Text(
                           "Votre vote a déjà été pris en compte",
                           style: TextStyle(
-                              color: Colors.white, fontSize: height / 45),
+                            color: Colors.white,
+                            fontSize: height / 45,
+                          ),
                         ),
                       ],
                     ),

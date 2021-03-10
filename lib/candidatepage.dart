@@ -139,29 +139,29 @@ class CandidatePageState extends State<CandidatePage> {
   Widget createCard(String imageurl, double width, double height,
       String candidateName, String description, String lien) {
     return Container(
-      padding: EdgeInsets.fromLTRB(height / 30, 0, height / 30, 0),
+      padding: EdgeInsets.fromLTRB(height > 850 ? height / 45 : 0, 0, height > 850 ? height / 45 : 0, 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(height / 30),
         color: Colors.white,
       ),
-      width: width / 5,
-      height: height / 3,
+      width: width > 780 ? width / 4 : width / 1.1,
+      height: height > 850 ? height / 1.5 : height / 0.7,
       child: Stack(
         children: [
           Column(
             children: [
-              SizedBox(height: height / 25),
+              SizedBox(height: height / 30),
               Row(
                 children: [
-                  SizedBox(width: width / 70),
+                  SizedBox(width: width / 80),
                   CircleAvatar(
                     backgroundImage: NetworkImage(
                       imageurl,
                       scale: 0.5,
                     ),
-                    radius: height / 11,
+                    radius: height > 600 ? height / 11 : height / 21,
                   ),
-                  SizedBox(width: width / 20),
+                  SizedBox(width: width > 780 ? width / 20 : width / 40),
                   Column(
                     children: [
                       Center(child: Text(candidateName)),
@@ -169,7 +169,7 @@ class CandidatePageState extends State<CandidatePage> {
                   ),
                 ],
               ),
-              SizedBox(height: height / 30),
+              SizedBox(height: height / 40),
               Divider(
                 color: Colors.black,
                 height: height / 300,
@@ -180,7 +180,7 @@ class CandidatePageState extends State<CandidatePage> {
               SizedBox(height: height / 30),
               Row(
                 children: [
-                  SizedBox(width: width / 50),
+                  SizedBox(width: width / 65),
                   Text(
                     "Description\n",
                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -188,13 +188,13 @@ class CandidatePageState extends State<CandidatePage> {
                 ],
               ),
               Container(
-                height: height / 6,
-                child: Text(description),
+                height: height / 30,
+                child: Center (child :Text(description)),
               ),
-              SizedBox(height: height / 20),
-              Text("Lien vers ma présentation",
+              SizedBox(height: height / 30),
+              Text("Lien vers une page professionnelle",
                   style: TextStyle(fontWeight: FontWeight.bold)),
-              SizedBox(height: height / 60),
+              SizedBox(height: height / 80),
               GestureDetector(
                 child: Text(
                   lien,
@@ -205,10 +205,10 @@ class CandidatePageState extends State<CandidatePage> {
                 ),
                 onTap: () => _launchURL(lien),
               ),
-              SizedBox(height: height / 9),
+              SizedBox(height: height > 650 ? height / 4 : height / 50),
               Container(
                 width: width > 850 ? width / 7 : width / 3,
-                height: height / 20,
+                height: height / 23,
                 padding: EdgeInsets.only(
                   right: height / 20,
                   left: height / 20,

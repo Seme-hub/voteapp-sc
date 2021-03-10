@@ -86,7 +86,7 @@ class AddImageState extends State<AddImage> {
             ),
             SizedBox(height: height / 25),
             Container(
-              width: width > 700 ? width / 6.5 : width / 6,
+              width: width > 700 ? width / 6.5 : 100,
               height: height / 12,
               child: FlatButton(
                 color: Colors.white,
@@ -110,7 +110,7 @@ class AddImageState extends State<AddImage> {
             ),
             SizedBox(height: height / 15),
             Container(
-              width: width > 700 ? width / 8 : width / 5.2,
+              width: width > 700 ? width / 6.6 : width / 3.7,
               height: height / 16,
               child: FlatButton(
                 shape: new RoundedRectangleBorder(

@@ -101,7 +101,7 @@ class ConnexionPageState extends State<ConnexionPage> {
                       ? width / 4
                       : (width > 1170
                           ? width / 4.3
-                          : (width > 900 ? width / 3.4 : width / 1.4)),
+                          : (width > 900 ? width / 3.4 : width / 1.2)),
                   height: height / 1.8,
                   child: Form(
                     key: _formKey,
@@ -120,7 +120,7 @@ class ConnexionPageState extends State<ConnexionPage> {
                               ),
                             ),
                             Text(
-                              "pour accéder au vote",
+                              "pour y accéder",
                               style: TextStyle(
                                 fontSize: height / 40,
                                 color: Colors.white,
@@ -131,8 +131,8 @@ class ConnexionPageState extends State<ConnexionPage> {
                         ),
                         SizedBox(height: height / 25),
                         Container(
-                          width: width > 950 ? width / 6 : width / 4,
-                          height: height / 10,
+                          width: width > 950 ? width / 6 : (width > 760 ? width / 2.7 : width / 1.8),
+                          height: height / 9,
                           child: TextFormField(
                             cursorColor: Colors.black,
                             decoration: InputDecoration(
@@ -160,8 +160,8 @@ class ConnexionPageState extends State<ConnexionPage> {
                         ),
                         SizedBox(height: height / 12),
                         Container(
-                          width: width > 950 ? width / 6 : width / 4,
-                          height: height / 10,
+                          width: width > 950 ? width / 6 : (width > 760 ? width / 2.7 : width / 1.8),
+                          height: height / 9,
                           child: TextFormField(
                             cursorColor: Colors.black,
                             decoration: InputDecoration(
@@ -196,11 +196,11 @@ class ConnexionPageState extends State<ConnexionPage> {
                             },
                           ),
                         ),
-                        SizedBox(height: height / 17),
+                        SizedBox(height: height / 20),
                         Container(
                           width: width > 1000
                               ? width / 8
-                              : (width > 720 ? width / 5.5 : width / 4),
+                              : (width > 720 ? width / 5.5 : width / 2),
                           height: height / 20,
                           child: FlatButton(
                             shape: new RoundedRectangleBorder(
